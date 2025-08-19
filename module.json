@@ -2,12 +2,10 @@
     "title": "Return of the Runelords Map Remake (Unofficial)",
     "description": "2e Map Remake of Return of the Runelords. Works with 1e as well, but potentially does not come with any bells and whistles.",
     "version": "0.0.1",
-    "scripts": [
-    ],
+    "scripts": [],
     "url": "https://github.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake",
     "license": "LICENSE",
-    "styles": [
-    ],
+    "styles": [],
     "packs": [
         {
             "name": "scenes",
@@ -29,7 +27,7 @@
         }
     ],
     "manifest": "https://github.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/releases/latest/download/module.json",
-    "download": "https://github.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/releases/download/0.0.1/release.zip",
+    "download": "https://github.com/BernhardPosselt/pf2e-kingmaker-map-remake/releases/download/0.0.1/release.zip",
     "id": "pf2e-return-of-the-runelords-map-remake",
     "authors": [
         {
@@ -42,9 +40,9 @@
             {
                 "id": "pf2e"
             },
-          {
-            "id": "pf1"
-          }
+            {
+                "id": "pf1"
+            }
         ]
     },
     "compatibility": {
