@@ -2,7 +2,9 @@
 
 This module includes a map remake for Return of the Runelords under Paizo's CUP. The module is tuned for 2e, but should also work in 1e.
 
-**Important**: When importing maps from the compendium, check X
+**Important**: When importing maps from the compendium, check **Keep Document IDs**, otherwise teleporters won't work! 
+
+![Keep document IDs](./docs/img/import.png)
 
 **Note**: Not all maps are yet included, they will be shipped with further updates
 
