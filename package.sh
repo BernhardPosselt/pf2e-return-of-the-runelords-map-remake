@@ -13,7 +13,7 @@ mkdir -p build/pf2e-return-of-the-runelords-map-remake/
 
 # create archive
 node ./scripts/update-module-json.mjs "$version"
-cp module.json README.md LICENSE CHANGELOG.md build/pf2e-kingmaker-map-remake/
+cp module.json README.md LICENSE CHANGELOG.md build/pf2e-return-of-the-runelords-map-remake/
 cp -r packs/ assets/ build/pf2e-return-of-the-runelords-map-remake/
 
 cd build
