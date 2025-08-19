@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Run with ./release.sh 0.0.2 "$GITHUB_TOKEN" "$FOUNDRY_MAP_REMAKE_TOKEN"
+# Run with ./release.sh 0.0.2 "$GITHUB_TOKEN" "$FOUNDRY_RETURN_MAP_REMAKE_TOKEN"
 # requires zip, curl, jq
 
 set -e
