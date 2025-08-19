@@ -22,6 +22,7 @@ All Maps were [kindly provided](https://paizo.com/threads/rzs43u9i?Community-Cre
 * Magnimar - Gryphine Suite
 * Magnimar - Ruins of Saint Sazzleru
 * Korvosa - Kendall Plaza
+* Jorgenfist
 * Crystilan - The Timeworn Tunnel
 * Crystilan - Rune Giant Territory
 * Crystilan - Xin Edasseril Streets
