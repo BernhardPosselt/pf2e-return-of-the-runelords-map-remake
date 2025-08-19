@@ -14,7 +14,7 @@ All maps are licensed under Paizo's [CUP](https://paizo.com/licenses/communityus
 
 > This FoundryVTT module uses trademarks and/or copyrights owned by Paizo Inc., used under Paizo's Community Use Policy (paizo.com/licenses/communityuse). We are expressly prohibited from charging you to use or access this content. This FoundryVTT module is not published, endorsed, or specifically approved by Paizo. For more information about Paizo Inc. and Paizo products, visit [paizo.com](paizo.com).
 
-All Maps were kindly provided by Vornn (Discord) and GoldSoul (Discord). If you want to donate to Vornn, [here's their ko-fi](https://ko-fi.com/vornn)
+All Maps were [kindly provided](https://paizo.com/threads/rzs43u9i?Community-Created-Maps) by Vornn (Discord) and GoldSoul (Discord). If you want to donate to Vornn, [here's their ko-fi](https://ko-fi.com/vornn)
 
 **GoldSoul's** maps include:
 
