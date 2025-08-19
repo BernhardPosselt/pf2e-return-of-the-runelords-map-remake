@@ -1,7 +1,7 @@
 {
     "title": "Return of the Runelords Map Remake (Unofficial)",
     "description": "2e Map Remake of Return of the Runelords. Works with 1e as well, but potentially does not come with any bells and whistles.",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": [],
     "url": "https://github.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake",
     "license": "LICENSE",
