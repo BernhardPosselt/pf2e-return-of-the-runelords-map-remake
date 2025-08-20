@@ -31,6 +31,19 @@ All Maps were [kindly provided](https://paizo.com/threads/rzs43u9i?Community-Cre
 
 The maps were built using [Forgotten Adventure's Assets](https://www.forgotten-adventures.net/) and fall under their [Fan Content License](https://docs.google.com/document/d/1YVEXSHlePMtlD-CPAigBF_b_dX9AoLEDJt4mv0oVyvQ/edit?tab=t.0)
 
+## Completion
+
+The following maps are not (yet) included:
+
+**Book 3**: 
+  * The Invaders encounter: no fixed location given in the book
+* **Book 5**:
+  * Runestep Throne
+  * Emerald Guardhouse
+  * Cultist Territory
+  * Runelord Territory
+* **Book 6**: Any map after the first
+
 ## Releasing a New Version
 
 Requires **zip**, **curl**, **jq**
