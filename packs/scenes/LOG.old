@@ -1,8 +1,15 @@
-2025/08/21-09:36:51.545094 7f911e7fc6c0 Recovering log #12
-2025/08/21-09:36:51.565627 7f911e7fc6c0 Delete type=3 #10
-2025/08/21-09:36:51.565643 7f911e7fc6c0 Delete type=0 #12
-2025/08/22-01:01:22.315501 7f8f0d7c06c0 Level-0 table #17: started
-2025/08/22-01:01:22.315512 7f8f0d7c06c0 Level-0 table #17: 0 bytes OK
-2025/08/22-01:01:22.327585 7f8f0d7c06c0 Delete type=0 #15
-2025/08/22-01:01:22.378379 7f8f0d7c06c0 Manual compaction at level-0 from '!folders!6Rt3lFqY78sswuP1' @ 72057594037927935 : 1 .. '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 0 : 0; will stop at (end)
-2025/08/22-01:01:22.390754 7f8f0d7c06c0 Manual compaction at level-1 from '!folders!6Rt3lFqY78sswuP1' @ 72057594037927935 : 1 .. '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 0 : 0; will stop at (end)
+2025/08/22-09:08:11.835603 7f3821bfd6c0 Recovering log #16
+2025/08/22-09:08:11.853797 7f3821bfd6c0 Delete type=3 #14
+2025/08/22-09:08:11.853814 7f3821bfd6c0 Delete type=0 #16
+2025/08/22-23:14:05.168730 7f35fbbff6c0 Level-0 table #21: started
+2025/08/22-23:14:05.180584 7f35fbbff6c0 Level-0 table #21: 839594 bytes OK
+2025/08/22-23:14:05.192800 7f35fbbff6c0 Delete type=0 #19
+2025/08/22-23:14:05.193030 7f35fbbff6c0 Manual compaction at level-0 from '!folders!6Rt3lFqY78sswuP1' @ 72057594037927935 : 1 .. '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 0 : 0; will stop at (end)
+2025/08/22-23:14:05.229903 7f35fbbff6c0 Manual compaction at level-1 from '!folders!6Rt3lFqY78sswuP1' @ 72057594037927935 : 1 .. '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 0 : 0; will stop at '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 12539 : 0
+2025/08/22-23:14:05.229907 7f35fbbff6c0 Compacting 1@1 + 1@2 files
+2025/08/22-23:14:05.241275 7f35fbbff6c0 Generated table #22@1: 6357 keys, 620910 bytes
+2025/08/22-23:14:05.241281 7f35fbbff6c0 Compacted 1@1 + 1@2 files => 620910 bytes
+2025/08/22-23:14:05.253596 7f35fbbff6c0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/08/22-23:14:05.253641 7f35fbbff6c0 Delete type=2 #5
+2025/08/22-23:14:05.253740 7f35fbbff6c0 Delete type=2 #21
+2025/08/22-23:14:05.278005 7f35fbbff6c0 Manual compaction at level-1 from '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 12539 : 0 .. '!scenes.walls!yOzBb57dcMve0k7w.zrziTdHeQhQ0jHlb' @ 0 : 0; will stop at (end)
