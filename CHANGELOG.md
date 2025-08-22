@@ -6,12 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] - 2025-08-22
+
+### Changed
+
+* Added properly modified version of Vault of Crimson Longing and Cloister of Cerulean Langour 
+
 ## [0.0.2] - 2025-08-22
 
 ### Added
 
 * Added Maps up to book 6 map 1
 
+### Changed
+
+* Change Vault of Crimson Longing and Cloister of Cerulean Langour to not contain images from PDFs anymore
 
 ## [0.0.1] - 2025-08-19
 
