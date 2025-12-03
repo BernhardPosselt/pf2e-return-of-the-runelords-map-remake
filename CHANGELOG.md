@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 2025-11-04
+
+### Added
+
+* Every book 6 map except for the final one
+
+### Fixed
+
+* Fixed folder structure in the final map
+
+
 ## [0.0.5] - 2025-11-04
 
 ### Added
