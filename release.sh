@@ -19,7 +19,9 @@ git push
 git push --tags
 
 # upload release zip
-id=$(curl --no-progress-meter -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token $token" "https://api.github.com/repos/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/releases" -d "{\"tag_name\":\"$version\",\"target_commitish\":\"master\",\"name\":\"$version\",\"body\":\"\",\"draft\":false,\"prerelease\":false,\"generate_release_notes\":false}" | jq ".id")
+upload=$(curl --no-progress-meter -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token $token" "https://api.github.com/repos/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/releases" -d "{\"tag_name\":\"$version\",\"target_commitish\":\"master\",\"name\":\"$version\",\"body\":\"\",\"draft\":false,\"prerelease\":false,\"generate_release_notes\":false}")
+echo $upload
+id=$(jq ".id" "$upload")
 curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token $token" -H "Content-Type: application/zip" "https://uploads.github.com/repos/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/releases/$id/assets?name=release.zip" --data-binary "@build/release.zip"
 # call foundry api
 curl -X POST -H "Content-Type: application/json" -H "Authorization: $ftoken" -d "{\"id\":\"pf2e-return-of-the-runelords-map-remake\",\"dry-run\":false,\"release\":{\"version\":\"$version\",\"manifest\":\"https://raw.githubusercontent.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/$version/module.json\",\"notes\":\"https://github.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake/blob/master/CHANGELOG.md\",\"compatibility\":{\"minimum\":\"13\",\"verified\":\"13\"}}}" "https://api.foundryvtt.com/_api/packages/release_version/"
