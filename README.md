@@ -29,10 +29,15 @@ All Maps were [kindly provided](https://paizo.com/threads/rzs43u9i?Community-Cre
 
 The maps were built using [Forgotten Adventure's Assets](https://www.forgotten-adventures.net/) and fall under their [Fan Content License](https://docs.google.com/document/d/1YVEXSHlePMtlD-CPAigBF_b_dX9AoLEDJt4mv0oVyvQ/edit?tab=t.0)
 
-## Releasing a New Version
+## Release a New Version
 
-Requires **zip**, **curl**, **jq**
+Set the following env variables:
 
-First update the version in the module.json file, then run:
+* **FOUNDRY_RETURN_MAP_REMAKE_TOKEN**: Token [from the package website](https://foundryvtt.com/packages/pf2e-return-of-the-runelords-map-remake/edit)
+* **GITHUB_TOKEN**: [Fine Grained Access Token](https://github.com/settings/personal-access-tokens) with permissions: **Metadata: read**, **Content: read and write**
 
-    ./release.sh 0.0.2 "$GITHUB_TOKEN" "$FOUNDRY_RETURN_MAP_REMAKE_TOKEN"
+Update the version **build.gradle.kts**
+
+Run:
+
+    ./gradlew foundryvttRelease
