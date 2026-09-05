@@ -1,9 +1,14 @@
-async function readaloudText(section, behavior, token, defaultPath = "pf2e-return-of-the-runelords-assets/voice-lines") {
+function resolvePath() {
+    const sceneName = game.scenes.active.name.replace('\'', '');
+    return 'pf2e-return-of-the-runelords-assets/voice-lines/' + sceneName + '/data.json';
+}
+
+async function readaloudText(section, behavior, token) {
     if (!game.users.activeGM.isSelf) return;
     if (token && !['character', 'familiar'].includes(token.actor.type)) return;
     const sceneName = game.scenes.active.name;
-    const lines = await fetch(`./${defaultPath}/${sceneName.replace('\'', '')}/lines.json`).then(a => a.json());
-    const line = lines[section];
+    const data = await fetch(resolvePath()).then(a => a.json());
+    const line = data.lines[section];
     if (behavior) {
         await behavior.update({disabled: true});
     }
@@ -15,10 +20,9 @@ async function readaloudText(section, behavior, token, defaultPath = "pf2e-retur
 }
 
 async function playSceneText(){
-    const playOnSceneLoad = await fetch(`pf2e-return-of-the-runelords-assets/voice-lines/scenes.json`).then(a => a.json());
-    const sceneName = game.scenes.active.name;
-    if (sceneName in playOnSceneLoad) {
-        await readaloudText(playOnSceneLoad[sceneName]);
+    const data = await fetch(resolvePath()).then(a => a.json());
+    if ('events' in data && 'onload' in data.events) {
+        await readaloudText(data.events.onload);
     }
 }
 
