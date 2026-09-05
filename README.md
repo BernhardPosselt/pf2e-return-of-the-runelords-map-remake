@@ -58,7 +58,7 @@ The **event.onload** configuration will be run once the scene loads. The configu
 To do that, define a region in Foundry and give it the **Execute Script** behavior. Choose **Token Enters** as the Event and paste the following into the script box:
 
 ```js
-// if you pass event.data.token, it will check if the type is either character or familiar and otherwise not activate
+// if you pass event.data.token, it will check if the token's actor type is either character or familiar and otherwise not activate
 game.pf2eReturnOfTheRunelordsMapRemake.readaloudText('A1', behavior, event.data.token)
 ```
 
