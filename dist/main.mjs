@@ -16,7 +16,7 @@ async function readaloudText(section, behavior, token) {
     const sound = game.playlists.getName(sceneName)?.sounds?.getName(section);
     const todos = [];
     if (sound) todos.push(sound.update({"playing": true}))
-    if (line) todos.push(ChatMessage.create({content: line}))
+    if (line) todos.push(ChatMessage.create({content: `<b>${section}</b>: ${line}`}))
     await Promise.all(todos);
 }
 
