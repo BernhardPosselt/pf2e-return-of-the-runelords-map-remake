@@ -1,13 +1,14 @@
-function resolvePath() {
-    const sceneName = game.scenes.active.name.replace('\'', '');
+function resolvePath(scene) {
+    const sceneName = scene.name.replace('\'', '');
     return 'pf2e-return-of-the-runelords-assets/voice-lines/' + sceneName + '/data.json';
 }
 
 async function readaloudText(section, behavior, token) {
     if (!game.users.activeGM.isSelf) return;
     if (token && !['character', 'familiar'].includes(token.actor.type)) return;
-    const sceneName = game.scenes.active.name;
-    const data = await fetch(resolvePath()).then(a => a.json());
+    const scene = behavior.parent.parent;
+    const sceneName = scene.name;
+    const data = await fetch(resolvePath(scene)).then(a => a.json());
     const line = data.lines[section];
     if (behavior) {
         await behavior.update({disabled: true});
@@ -21,7 +22,7 @@ async function readaloudText(section, behavior, token) {
 
 async function playSceneText() {
     try {
-        const data = await fetch(resolvePath()).then(a => a.json());
+        const data = await fetch(resolvePath(game.scenes.active)).then(a => a.json());
         if ('events' in data && 'onload' in data.events && game.users.activeGM.isSelf) {
             await readaloudText(data.events.onload);
             await setSceneRead(true);
