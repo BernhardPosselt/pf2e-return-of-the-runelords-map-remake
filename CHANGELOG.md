@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+* Book 1 - Armory: E4 is now "boarded up" as in: door is locked
+* Book 1 - Underflume: door to h11 is now opened by default
+
 ## [2.1.2] - 2026-05-22
 
 ### Changed

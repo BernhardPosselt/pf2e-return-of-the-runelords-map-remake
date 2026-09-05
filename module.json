@@ -5,7 +5,12 @@
     "scripts": [],
     "url": "https://github.com/BernhardPosselt/pf2e-return-of-the-runelords-map-remake",
     "license": "LICENSE",
-    "styles": [],
+    "esmodules": [
+        "dist/main.mjs"
+    ],
+    "styles": [
+        "dist/style.css"
+    ],
     "packs": [
         {
             "name": "scenes",
