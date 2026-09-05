@@ -19,16 +19,34 @@ async function readaloudText(section, behavior, token) {
     await Promise.all(todos);
 }
 
-async function playSceneText(){
+function sceneData() {
+    return game.scenes.active.getFlag('pf2e-return-of-the-runelords-map-remake', 'readaloud');
+}
+
+async function setSceneRead(value) {
+    return await game.scenes.active.setFlag('pf2e-return-of-the-runelords-map-remake', 'readaloud', {
+        onload: value,
+    });
+}
+
+async function playSceneText() {
     const data = await fetch(resolvePath()).then(a => a.json());
-    if ('events' in data && 'onload' in data.events) {
-        await readaloudText(data.events.onload);
+    if ('events' in data && 'onload' in data.events && sceneData()?.onload !== true && game.users.activeGM.isSelf) {
+        const confirmed = await Dialog.confirm({
+            title: "Play Readaloud Text",
+            defaultYes: true
+        });
+        if (confirmed) {
+            await readaloudText(data.events.onload);
+            await setSceneRead(true);
+        }
     }
 }
 
 Hooks.on('init', () => {
     game.pf2eReturnOfTheRunelordsMapRemake = {
         readaloudText,
+        resetSceneRead: () => setSceneRead(false),
     };
 })
 
