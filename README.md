@@ -66,6 +66,12 @@ In either case, the value inside lines will be posted to chat.
 
 If a playlist exists with the name of the scene, the track with the same name as the key will be played as well (e.g. A1). Make sure to set the playlist to **Soundboard Only** and the **Audio Channel** to something other than **Music** so players can crank it up.
 
+Once a scene text has been read, it's checked off as read. To reset it for the active scene, run:
+
+```js
+game.pf2eReturnOfTheRunelordsMapRemake.resetSceneRead()
+```
+
 ## Release a New Version
 
 Set the following env variables:
