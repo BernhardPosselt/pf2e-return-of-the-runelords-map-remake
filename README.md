@@ -29,6 +29,42 @@ All Maps were [kindly provided](https://paizo.com/threads/rzs43u9i?Community-Cre
 
 The maps were built using [Forgotten Adventure's Assets](https://www.forgotten-adventures.net/) and fall under their [Fan Content License](https://docs.google.com/document/d/1YVEXSHlePMtlD-CPAigBF_b_dX9AoLEDJt4mv0oVyvQ/edit?tab=t.0)
 
+## Readaloud Text
+
+This module supports read-aloud text. 2 Variants are supported:
+
+* Read-aloud text on scene load
+* Read-aloud text on regions
+
+### Configuration
+
+The module will look up a JSON file in **Data/pf2e-return-of-the-runelords-assets/voice-lines/SCENE_NAME/data.json** which has the following format:
+
+```json
+{
+  "events": {
+    "onload": "A1"
+  },
+  "lines": {
+    "A1": "Example text posted to chat"
+  }
+}
+```
+
+**SCENE_NAME** is the name of the active scene with special characters stripped (any of: **'**)
+
+The **event.onload** configuration will be run once the scene loads. The configuration values in **lines** can be run from a scene region script.
+
+To do that, define a region in Foundry and give it the **Execute Script** behavior. Choose **Token Enters** as the Event and paste the following into the script box:
+
+```js
+game.pf2eReturnOfTheRunelordsMapRemake.readaloudText('A1', behavior, event.data.token)
+```
+
+In either case, the value inside lines will be posted to chat. 
+
+If a playlist exists with the name of the scene, the track with the same name as the key will be played as well (e.g. A1). Make sure to set the playlist to **Soundboard Only** and the **Audio Channel** to something other than **Music** so players can crank it up.
+
 ## Release a New Version
 
 Set the following env variables:

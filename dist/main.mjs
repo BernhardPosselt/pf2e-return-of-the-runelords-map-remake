@@ -1,5 +1,6 @@
-async function readaloudText(section, behavior, defaultPath = "pf2e-return-of-the-runelords-assets/voice-lines") {
+async function readaloudText(section, behavior, token, defaultPath = "pf2e-return-of-the-runelords-assets/voice-lines") {
     if (!game.users.activeGM.isSelf) return;
+    if (token && !['character', 'familiar'].includes(token.actor.type)) return;
     const sceneName = game.scenes.active.name;
     const lines = await fetch(`./${defaultPath}/${sceneName.replace('\'', '')}/lines.json`).then(a => a.json());
     const line = lines[section];
